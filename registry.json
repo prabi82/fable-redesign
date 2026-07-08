@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "description": "Anti-sameness registry. Append each completed project. Compare new rolls against last 3 entries.",
+  "projects": [
+    {
+      "client": "Al Angham",
+      "date": "2026-03-01",
+      "industry": "hospitality-dining",
+      "hero": 2,
+      "rhythm": 0,
+      "nav": 0,
+      "scene": 0,
+      "type": 1,
+      "color": 2,
+      "texture": 0,
+      "footer": 3,
+      "cards": 1,
+      "transition": 2,
+      "paletteFamily": "dark-gold-serif",
+      "notes": "Heritage restaurant — dark luxury justified by brand"
+    },
+    {
+      "client": "Delta Shipping",
+      "date": "2026-03-15",
+      "industry": "logistics-shipping",
+      "hero": 6,
+      "rhythm": 1,
+      "nav": 1,
+      "scene": 0,
+      "type": 3,
+      "color": 2,
+      "texture": 2,
+      "footer": 0,
+      "cards": 0,
+      "transition": 0,
+      "paletteFamily": "light-navy-corporate",
+      "notes": "Gulf Port Manifest concept — light institutional"
+    },
+    {
+      "client": "MHMY Auditors",
+      "date": "2026-04-01",
+      "industry": "audit-finance-legal",
+      "hero": 0,
+      "rhythm": 2,
+      "nav": 2,
+      "scene": 3,
+      "type": 4,
+      "color": 3,
+      "texture": 5,
+      "footer": 1,
+      "cards": 0,
+      "transition": 1,
+      "paletteFamily": "light-ice-blue-institutional",
+      "notes": "Proof-first, sidebar rail — required labeled nav overlay"
+    }
+  ]
+}
