@@ -2,6 +2,15 @@
 
 Agent skill bundle for redesigning existing client websites into modern, award-tier web experiences — unique per industry, unique per client.
 
+This repository ships **two** agent skills:
+
+| Skill | Location | Role |
+|-------|----------|------|
+| **fable-redesign** | repo root (`SKILL.md`) | Full redesign workflow: research, industry packs, structure roll, motion, Phase 6 QA |
+| **frontend-design** | `skills/frontend-design/` | Anthropic’s visual-design guidance for distinctive, non-templated UI (see [source & license](#third-party-frontend-design)) |
+
+Use **fable-redesign** as the primary skill for client redesigns. Attach **frontend-design** on the same agent when you want extra design-studio direction on typography, layout, and aesthetic choices — it aligns with fable-redesign’s anti-template rules and is especially useful in Phases 1–2 (concept and design system) without replacing the phased playbook or verification protocol.
+
 ## What it does
 
 - **Research-first:** extracts real brand from the client's live site
@@ -13,7 +22,12 @@ Agent skill bundle for redesigning existing client websites into modern, award-t
 
 ```
 fable-redesign/
-├── SKILL.md                          # Lean router — start here
+├── SKILL.md                          # fable-redesign — lean router, start here
+├── skills.sh.json                    # skills.sh repository page grouping
+├── skills/
+│   └── frontend-design/
+│       ├── SKILL.md                  # Anthropic frontend-design (verbatim)
+│       └── LICENSE.txt               # Apache 2.0 — see Third-party section
 ├── registry.json                     # Cross-project anti-sameness memory
 ├── scripts/
 │   ├── roll.mjs                      # Deterministic structure roll
@@ -48,9 +62,19 @@ fable-redesign/
 
 ### Cursor
 
+**fable-redesign** (primary):
+
 ```
 git clone https://github.com/prabi82/fable-redesign.git ~/.cursor/skills/fable-redesign
 ```
+
+**frontend-design** (optional, from the same clone):
+
+```
+ln -s ~/.cursor/skills/fable-redesign/skills/frontend-design ~/.cursor/skills/frontend-design
+```
+
+Enable both skills on the agent when you want the redesign workflow plus Anthropic’s frontend aesthetic guidance.
 
 ### Paperclip
 
@@ -65,7 +89,18 @@ Attach `fable-redesign` on your redesign agent's Skills tab.
 ### skills.sh
 
 ```
-npx skills add prabi82/fable-redesign
+# List both skills (root SKILL.md does not enumerate nested skills by default)
+npx skills add prabi82/fable-redesign --full-depth --list
+
+# Install the redesign workflow
+npx skills add prabi82/fable-redesign --skill fable-redesign
+
+# Install bundled frontend-design (use --full-depth or the direct path)
+npx skills add prabi82/fable-redesign --full-depth --skill frontend-design
+# npx skills add https://github.com/prabi82/fable-redesign/tree/main/skills/frontend-design
+
+# Install both
+npx skills add prabi82/fable-redesign --full-depth --all
 ```
 
 ## Quick start
@@ -95,4 +130,8 @@ Optional: `npm install sharp` in repo root for accurate palette extraction.
 
 ## License
 
-MIT
+**fable-redesign** (repo root, `references/`, `scripts/`, `registry.json`): MIT
+
+### Third-party: frontend-design
+
+The skill in `skills/frontend-design/` is copied verbatim from [Anthropic’s skills repository](https://github.com/anthropics/skills/tree/main/skills/frontend-design) ([`SKILL.md`](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md)). License terms are in `skills/frontend-design/LICENSE.txt` (Apache License 2.0). Attribution and copyright notices in that file are preserved unchanged.
