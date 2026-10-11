@@ -6,8 +6,10 @@ Optimal invocation prompts for different platforms. Copy, fill placeholders, run
 
 ## Cursor (recommended)
 
+With both skills enabled (`fable-redesign` + optional `frontend-design`):
+
 ```
-Read and follow the fable-redesign skill from start to finish.
+Read and follow the fable-redesign skill from start to finish. Where Phases 1–2 need visual direction, apply frontend-design principles without skipping fable-redesign’s industry pack, brand extraction, or anti-template rules.
 
 Client: {Company Name}
 Existing site: {URL}
@@ -52,7 +54,7 @@ Do NOT reuse aesthetics from Al Angham, Delta Shipping, or MHMY unless
 the client's brand genuinely matches.
 ```
 
-**Agent skills:** `fable-redesign`, `agent-browser` (for Phase 6)
+**Agent skills:** `fable-redesign`, `agent-browser` (for Phase 6). Optionally add Anthropic’s `frontend-design` (in `skills/frontend-design/` in this repo) for stronger visual-direction guidance during Phases 1–2; fable-redesign still owns phases, rolls, and verification.
 
 ---
 

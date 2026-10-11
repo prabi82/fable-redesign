@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Client redesign workflow",
+      "description": "End-to-end redesign: research, industry packs, deterministic structure rolls, motion, and browser QA.",
+      "skills": ["fable-redesign"]
+    },
+    {
+      "title": "Visual design (bundled)",
+      "description": "Anthropic frontend-design skill for distinctive typography, layout, and anti-template aesthetics. Complements fable-redesign during Phases 1–2 and craft passes.",
+      "skills": ["frontend-design"]
+    }
+  ]
+}
